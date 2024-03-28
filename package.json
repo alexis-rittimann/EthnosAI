@@ -11,12 +11,15 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.4.0",
     "@astrojs/mdx": "^1.1.5",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.2",
     "@fontsource-variable/inter": "^5.0.15",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^3.5.5",
+    "@types/alpinejs": "^3.13.10",
+    "alpinejs": "^3.13.7",
+    "astro": "^3.6.5",
     "astro-icon": "^0.8.1",
     "astro-navbar": "^2.3.0",
     "astro-seo": "^0.8.0",

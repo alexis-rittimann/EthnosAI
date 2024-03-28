@@ -1,19 +1,66 @@
-<footer class="my-20">
-  <p class="text-center text-sm text-slate-500">
-    Copyright © {new Date().getFullYear()} Astroship. All rights reserved.
-  </p>
-  <!--
-    Can we ask you a favor 🙏
-    Please keep this backlink on your website if possible.
-    or Purchase a commercial license from https://web3templates.com
-  -->
-  <p class="text-center text-xs text-slate-500 mt-1">
-    Made by <a
-      href="https://web3templates.com"
-      target="_blank"
-      rel="noopener"
-      class="hover:underline">
-      Web3Templates
-    </a>
-  </p>
+---
+import { Image } from 'astro:assets';
+import myImage from "assets/LogosoftA0_H100.png"; // Image is 1600x900
+
+---
+
+<footer class="my-10 ">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-16">
+    <div class="md:flex md:justify-between">
+      <div class="mb-6 md:mb-0">
+        <a href="./accueil.html" class="flex items-center">
+          <Image src={myImage} alt="logo " />
+        </a>
+      </div>
+      <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+        <div>
+          <h2 class="mb-6 text-sm font-semibold  uppercase ">RESOURCES</h2>
+          <ul class="  font-normal">
+            <li class="mb-4">
+              <a href="/" class="hover:underline">Accueil</a>
+            </li>
+            <li class="mb-4">
+              <a href="/pricing/" class="hover:underline">Tarifs</a>
+            </li>
+            <li>
+              <a href="/contact/" class="hover:underline">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold  uppercase ">SUIVEZ-NOUS</h2>
+          <ul class="font-medium">
+            <li class="mb-4">
+              <a href="https://fr.linkedin.com/company/soft-concept" target="_blank"
+                class="hover:underline ">Linkedin</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/Soft_Concept" target="_blank"
+                class="hover:underline">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold  uppercase ">Légal</h2>
+          <ul class=" dark:text-gray-400 font-medium">
+            <li class="mb-4">
+              <a href="/politique-de-confidentialite/" class="hover:underline">Politique de
+                confidentialité</a>
+            </li>
+            <li>
+              <a href="/mentions-legales/" class="hover:underline">Mentions légales</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <span class="text-sm  sm:text-center "> Copyright © {new Date().getFullYear()} <a href="./accueil.html"
+          class="hover:underline">Softconcept</a>. Tous droits réservés.
+      </span>
+
+    </div>
+  </div>
 </footer>
+

@@ -1,0 +1,205 @@
+<div class="relative  flex flex-col justify-center bg-slate-50 overflow-hidden">
+    <div class="w-full max-w-2xl mx-auto px-4 md:px-6 py-24">
+
+        <h1 class="text-2xl font-bold text-slate-900 mb-4">FAQs</h1>
+
+        <!-- Accordion component -->
+        <div class="divide-y divide-slate-200">
+            <!-- Accordion item -->
+            <div x-data="{ expanded: false }" class="py-2">
+                <h2>
+                    <button
+                        id="faqs-title-01"
+                        type="button"
+                        class="flex items-center justify-between w-full text-left font-semibold py-2"
+                        @click="expanded = !expanded"
+                        :aria-expanded="expanded"
+                        aria-controls="faqs-text-01"
+                    >
+                        <span>Est ce que je dois télécharger un logiciel ?</span>
+                        <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                        </svg>
+                    </button>
+                </h2>
+                <div
+                    id="faqs-text-01"
+                    role="region"
+                    aria-labelledby="faqs-title-01"
+                    class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                    :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                    >
+                    <div class="overflow-hidden">
+                        <p class="pb-3">
+                            Non. La plateforme fonctionne entièrement en mode Saas et les questionnaires utilisent un format web classique. Vous et vos répondants devez simplement être équipés d'un navigateur moderne.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Accordion item -->
+            <div x-data="{ expanded: false }" class="py-2">
+                <h2>
+                    <button
+                        id="faqs-title-02"
+                        type="button"
+                        class="flex items-center justify-between w-full text-left font-semibold py-2"
+                        @click="expanded = !expanded"
+                        :aria-expanded="expanded"
+                        aria-controls="faqs-text-02"
+                    >
+                        <span>Comment récupérer les données collectées à la fin de l'enquête ?</span>
+                        <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                        </svg>
+                    </button>
+                </h2>
+                <div
+                    id="faqs-text-02"
+                    role="region"
+                    aria-labelledby="faqs-title-02"
+                    class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                    :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                    >
+                    <div class="overflow-hidden">
+                        <p class="pb-3">
+                            Les données collectées sont accessibles à tout moment sur la plateforme. Vous pouvez les exporter sur Excel. Net-Survey vous donne la possibilité d'élaborer des rapports avec des graphiques qui se mettent à jour automatiquement. Vous pouvez créer de véritables tableaux de bord automatiques. Ces graphiques sont exportables sur PDF à tout moment.
+                        </p>
+                    </div>
+                </div>
+            </div> 
+            <!-- Accordion item -->
+            <div x-data="{ expanded: false }" class="py-2">
+                <h2>
+                    <button
+                        id="faqs-title-03"
+                        type="button"
+                        class="flex items-center justify-between w-full text-left font-semibold py-2"
+                        @click="expanded = !expanded"
+                        :aria-expanded="expanded"
+                        aria-controls="faqs-text-03"
+                    >
+                        <span>Quels sont les types de questions sur Net-Survey ?</span>
+                        <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                        </svg>
+                    </button>
+                </h2>
+                <div
+                    id="faqs-text-03"
+                    role="region"
+                    aria-labelledby="faqs-title-03"
+                    class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                    :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                    >
+                    <div class="overflow-hidden">
+                        <p class="pb-3">
+                            Vous disposez de questions à choix unique, à choix multiple, questions texte, questions numériques, date, heure et des questions calculées à partir des réponses aux questions précédentes. Les questions calculées peuvent s'avérer très utiles si vous souhaitez réaliser des statistiques sur vos données.
+                        </p>
+                    </div>
+                </div>
+            </div> 
+            <!-- Accordion item -->
+            <div x-data="{ expanded: true }" class="py-2">
+                <h2>
+                    <button
+                        id="faqs-title-04"
+                        type="button"
+                        class="flex items-center justify-between w-full text-left font-semibold py-2"
+                        @click="expanded = !expanded"
+                        :aria-expanded="expanded"
+                        aria-controls="faqs-text-04"
+                    >
+                        <span>Le paiement sur le site est-il sécurisé ?</span>
+                        <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                        </svg>
+                    </button>
+                </h2>
+                <div
+                    id="faqs-text-04"
+                    role="region"
+                    aria-labelledby="faqs-title-04"
+                    class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                    :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                    >
+                    <div class="overflow-hidden">
+                        <p class="pb-3">
+                            Pour tout paiement en ligne sur notre site, les informations sont codées (protocole SSL), interdisant de fait toute propagation des informations en clair sur le Web.
+                        </p>
+                    </div>
+                </div>
+            </div> 
+            <!-- Accordion item -->
+            <div x-data="{ expanded: false }" class="py-2">
+                <h2>
+                    <button
+                        id="faqs-title-05"
+                        type="button"
+                        class="flex items-center justify-between w-full text-left font-semibold py-2"
+                        @click="expanded = !expanded"
+                        :aria-expanded="expanded"
+                        aria-controls="faqs-text-05"
+                    >
+                        <span>J'ai un questionnaire sur Word ou sur Excel. Comment créer le même questionnaire sur Net-Survey ?</span>
+                        <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                        </svg>
+                    </button>
+                </h2>
+                <div
+                    id="faqs-text-05"
+                    role="region"
+                    aria-labelledby="faqs-title-05"
+                    class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                    :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                    >
+                    <div class="overflow-hidden">
+                        <p class="pb-3">
+                            Net-Survey vous donne l'option d'importer directement des questionnaires depuis Word et Excel. Votre formulaire est en prêt en quelques clics.
+                        </p>
+                    </div>
+                </div>
+            </div> 
+            <!-- Accordion item -->
+            <div x-data="{ expanded: false }" class="py-2">
+                <h2>
+                    <button
+                        id="faqs-title-06"
+                        type="button"
+                        class="flex items-center justify-between w-full text-left font-semibold py-2"
+                        @click="expanded = !expanded"
+                        :aria-expanded="expanded"
+                        aria-controls="faqs-text-06"
+                    >
+                        <span>Je ne souhaite pas payer en ligne. Quels sont les autres moyens de paiement ?</span>
+                        <svg class="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                            <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" :class="{'!rotate-180': expanded}" />
+                        </svg>
+                    </button>
+                </h2>
+                <div
+                    id="faqs-text-06"
+                    role="region"
+                    aria-labelledby="faqs-title-06"
+                    class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+                    :class="expanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'"
+                    >
+                    <div class="overflow-hidden">
+                        <p class="pb-3">
+                            Vous pouvez payer par chèque ou virement bancaire. Pour cela, merci de prendre contact avec nous sur grâce au formulaire de contact ou directement à l'adresse support@ethnosoft.com.
+                        </p>
+                    </div>
+                </div>
+            </div> 
+                                                                                                         
+        </div>
+        <!-- End: Accordion component -->
+
+    </div>
+</div>

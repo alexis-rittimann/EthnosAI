@@ -2,14 +2,14 @@
 interface Props {
   size?: "md" | "lg";
   block?: boolean;
-  style?: "outline" | "primary" | "inverted";
+  style?: "outline" | "customblue" | "inverted";
   class?: string;
   [x: string]: any;
 }
 
 const {
   size = "md",
-  style = "primary",
+  style = "customblue",
   block,
   class: className,
   ...rest
@@ -23,7 +23,7 @@ const sizes = {
 const styles = {
   outline: "border-2 border-black hover:bg-black text-black hover:text-white",
   primary:
-    "bg-black text-white hover:bg-slate-900  border-2 border-transparent",
+    "bg-customblue text-white hover:bg-slate-900  border-2 border-transparent",
 };
 ---
 
