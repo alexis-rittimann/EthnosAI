@@ -12,4 +12,6 @@ export default defineConfig({
   integrations: [tailwind(), mdx(), sitemap(), alpinejs()],
   output: 'server',
   adapter: netlify(),
+  edgeMiddleware: true
+
 });
