@@ -1,10 +1,9 @@
 ---
-const items = [
-  { img: "/video1.png/", desc: 'Omnichannel', buttonIcon: '/assets/ps-icon-01.svg' },
-  { img: "/video2.png/", desc: 'Multilingual', buttonIcon: '/assets/ps-icon-02.svg' },
-  { img: "/video2.png/", desc: 'Interpolate', buttonIcon: '/assets/ps-icon-03.svg' },
-  { img: "/video1.png/", desc: 'Enriched', buttonIcon: '/assets/ps-icon-04.svg' },
-];
+import { Image } from 'astro:assets';
+import myImage from '../assets/4.png';
+
+
+
 ---
 <main class="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden">
     <div class="w-full  mx-auto px-4 md:px-6">
@@ -21,7 +20,7 @@ const items = [
                                 x-transition:leave="transition ease-in-out duration-300 absolute"
                                 x-transition:leave-start="opacity-100 scale-100"
                                 x-transition:leave-end="opacity-0 scale-95">
-                                <img :src="item.img" alt="iojoijio" class="w-full rounded-xl" >
+                                <img :src="item.img" :alt="item.desc" class="w-full rounded-xl" >
                             </div>
                         </template>
                     </div>
@@ -47,6 +46,14 @@ const items = [
 </main>
 
 <script >
+
+const items = [
+  { img: "{myImage}", desc: 'Omnichannel', buttonIcon: '/assets/ps-icon-01.svg' },
+  { img: "../assets/1.png", desc: 'Multilingual', buttonIcon: '/assets/ps-icon-02.svg' },
+  { img: "../assets/4.png", desc: 'Interpolate', buttonIcon: '/assets/ps-icon-03.svg' },
+  { img: "../assets/4.png", desc: 'Enriched', buttonIcon: '/assets/ps-icon-04.svg' },
+];
+ 
     document.addEventListener('alpine:init', () => {
         Alpine.data('carousel', () => ({
             duration: 5000,
@@ -55,22 +62,22 @@ const items = [
             firstFrameTime: 0,
             items: [
                 {
-                    img: 'image-1.png',
+                    img: '{myImage}',
                     desc: 'Omnichannel',
                     buttonIcon: 'ps-icon-01.svg',
                 },
                 {
-                    img: 'image-2.png',
+                    img: '/assets/4.png',
                     desc: 'Multilingual',
                     buttonIcon: 'ps-icon-02.svg',
                 },
                 {
-                    img: 'image-3.png',
+                    img: '/assets/4.png',
                     desc: 'Interpolate',
                     buttonIcon: 'ps-icon-03.svg',
                 },
                 {
-                    img: 'ps-image-04.png',
+                    img: '/assets/4.png',
                     desc: 'Enriched',
                     buttonIcon: 'ps-icon-04.svg',
                 },                                
