@@ -6,23 +6,7 @@
     <div x-data="{ isAnnual: true }">
   
       <!-- Pricing toggle -->
-      <div class="flex justify-center max-w-[14rem] m-auto mb-8 lg:mb-16">
-        <div class="relative flex w-full p-1 bg-white dark:bg-slate-900 rounded-full">
-          <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
-            <span
-              class="absolute inset-0 w-1/2 bg-indigo-500 rounded-full shadow-sm shadow-indigo-950/10 transform transition-transform duration-150 ease-in-out"
-              :class="isAnnual ? 'translate-x-0' : 'translate-x-full'"></span>
-          </span>
-          <button
-            class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
-            :class="isAnnual ? 'text-white' : 'text-slate-500 dark:text-slate-400'"
-            @click="isAnnual = true" :aria-pressed="isAnnual">Abonnement</button>
-          <button
-            class="relative flex-1 text-sm font-medium h-8 rounded-full focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-300 dark:focus-visible:ring-slate-600 transition-colors duration-150 ease-in-out"
-            :class="isAnnual ? 'text-slate-500 dark:text-slate-400' : 'text-white'"
-            @click="isAnnual = false" :aria-pressed="isAnnual">Pack de tokens</button>
-        </div>
-      </div>
+      
   
       <div class="max-w-sm mx-auto grid gap-6 lg:grid-cols-3 items-start lg:max-w-none">
   
@@ -237,9 +221,159 @@
         </div>
   
       </div>
+      
   
     </div>
     <!-- End: Pricing table component -->
+    <main class="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden">
+      <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
+
+          <header class="text-center mb-8">
+              <h2 class="text-xl font-bold text-slate-900">Vous avez besoin de recharger votre compte?</h2>
+          </header>
+
+          <!-- Pricing table component -->
+          <div x-data="pricingSlider">
+
+              <!-- Pricing slider -->
+              <div class="max-w-sm mx-auto lg:max-w-3xl space-y-3 mb-12 lg:mb-16">
+                  <div class="text-center text-sm text-slate-700 font-medium" x-text="`${prices[value].contacts} Tokens`"></div>
+                  <div class="relative flex items-center" :style="`--progress:${progress};--segments-width:${segmentsWidth}`">
+                      <div class="
+                          absolute left-2.5 right-2.5 h-1.5 bg-slate-200 rounded-full overflow-hidden
+                          before:absolute
+                          before:inset-0
+                          before:bg-gradient-to-r
+                          before:from-indigo-300
+                          before:to-indigo-500
+                          before:[mask-image:_linear-gradient(to_right,theme(colors.white),theme(colors.white)_var(--progress),transparent_var(--progress))]
+                          after:absolute
+                          after:inset-0
+                          after:bg-[repeating-linear-gradient(to_right,transparent,transparent_calc(var(--segments-width)-1px),theme(colors.white/.7)_calc(var(--segments-width)-1px),theme(colors.white/.7)_calc(var(--segments-width)+1px))]
+                          [&[x-cloak]]:hidden
+                      " aria-hidden="true" x-cloak></div>
+                      <input class="
+                          relative appearance-none cursor-pointer w-full bg-transparent focus:outline-none
+                          [&::-webkit-slider-thumb]:appearance-none
+                          [&::-webkit-slider-thumb]:h-5
+                          [&::-webkit-slider-thumb]:w-5
+                          [&::-webkit-slider-thumb]:rounded-full
+                          [&::-webkit-slider-thumb]:bg-white
+                          [&::-webkit-slider-thumb]:shadow
+                          [&::-webkit-slider-thumb]:focus-visible:ring
+                          [&::-webkit-slider-thumb]:focus-visible:ring-indigo-300
+                          [&::-moz-range-thumb]:h-5
+                          [&::-moz-range-thumb]:w-5                            
+                          [&::-moz-range-thumb]:rounded-full
+                          [&::-moz-range-thumb]:bg-white
+                          [&::-moz-range-thumb]:border-none
+                          [&::-moz-range-thumb]:shadow
+                          [&::-moz-range-thumb]:focus-visible:ring
+                          [&::-moz-range-thumb]:focus-visible:ring-indigo-300                            
+                      " type="range" min="0" :max="prices.length - 1" :aria-valuetext="`${prices[value].contacts} tokens`" aria-label="Pricing Slider" x-model="value">
+                  </div>
+                  <div>
+                      <ul class="flex justify-between text-xs font-medium text-slate-500 px-2.5">
+                          <template x-for="(price, index) in prices" :key="index">
+                              <li class="relative"><span class="absolute -translate-x-1/2" x-text="price.contacts"></span></li>
+                          </template>
+                      </ul>
+                  </div>
+              </div>
+
+              <div class="max-w-sm mx-auto grid gap-6 lg:grid-cols-2 items-start lg:max-w-[728px]">
+          
+              
+
+                  <!-- Pricing tab 2 -->
+                  <div class="h-full">
+                      <div class="relative flex flex-col h-full p-6 pb-10 rounded-2xl bg-slate-900 border border-slate-900 shadow shadow-slate-950/5">
+                          <div class="absolute top-0 right-0 mr-6 -mt-4">
+                          </div>
+                          <div class="h-8" aria-hidden="true">
+                              <svg class="drop-shadow-[0_0_8px_rgba(224,154,19,0.7)]" xmlns="http://www.w3.org/2000/svg" width="24" height="26">
+                                  <defs>
+                                      <linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                          <stop offset="0%" stop-color="#FBBF24" />
+                                          <stop offset="100%" stop-color="#F59E0B" />
+                                      </linearGradient>
+                                  </defs>
+                                  <path fill="url(#a)" fill-rule="evenodd" d="M15 0 0 16h11L9 26l15-16H13z" />
+                              </svg>
+                          </div>
+                          <div class="mb-5">
+                              <div class="text-slate-200 font-semibold mb-1">Token</div>
+                              <div class="inline-flex items-baseline mb-2">
+                                  <span class="text-slate-200 font-bold text-3xl">€</span>
+                                  <span class="text-slate-200 font-bold text-4xl" x-text="prices[value].plans.business"></span>
+                              </div>
+                              <div class="text-sm text-slate-500 mb-5">Créditez votre compte de token pour analyser vos verbatims.</div>
+                              <a class="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-indigo-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-indigo-950/10 hover:bg-indigo-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-slate-600 transition-colors duration-150" href="/contact/">
+                                  Acheter
+                              </a>
+                          </div>
+                          <div class="text-slate-200 text-sm font-medium mb-4">1 token = 1 commentaire</div>
+                          
+                         
+                      </div>
+                  </div>
+          
+              </div>
+          
+          </div>
+          <!-- Slider data and functionality: https://github.com/alpinejs/alpine -->
+          <script>
+              document.addEventListener('alpine:init', () => {
+                  Alpine.data('pricingSlider', () => ({
+                      value: 2,
+                      prices: [
+                         
+                          {
+                              contacts: '5K',
+                              plans: {
+                                  business: '50',
+                              }
+                          },
+                          {
+                              contacts: '25K',
+                              plans: {
+                                  business: '150',
+                              }
+                          },
+                          {
+                              contacts: '50K',
+                              plans: {
+                                  business: '250',
+                              }
+                          },
+                          {
+                              contacts: '100K',
+                              plans: {
+                                  business: '400',
+                              }
+                          },
+                        
+                      ],
+                      segmentsWidth: '100%',
+                      progress: '0%',
+                      segments: 1,
+                      calculateProgress() {
+                          this.segmentsWidth = 100 / this.segments + '%'
+                          this.progress = 100 / this.segments * this.value + '%'
+                      },
+                      init() {
+                          this.segments = this.prices.length - 1
+                          this.calculateProgress()
+                          this.$watch('value', () => this.calculateProgress())
+                      },
+                  }))
+              })
+          </script>            
+          <!-- End: Pricing table component -->
+
+      </div>
+  </main>
+
   
   </div>
   
