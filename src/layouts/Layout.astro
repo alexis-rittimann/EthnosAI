@@ -11,7 +11,7 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "../assets/LogosoftA0_H100.png",
   Astro.site
 ).toString();
 
@@ -46,11 +46,11 @@ const makeTitle = title
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `EthnosAI - Starter Template for Astro`,
+          title: `EthnosAI -`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "EthnosAI Homepage Screenshot",
+          alt: "EthnosAI ",
         },
       }}
     />
