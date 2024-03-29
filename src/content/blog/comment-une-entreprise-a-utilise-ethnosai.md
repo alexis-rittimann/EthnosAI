@@ -3,7 +3,7 @@ draft: false
 title: "Étude de cas : Comment une entreprise a utilisé EthnosAI pour améliorer son expérience client"
 snippet: "Plongez dans une étude de cas révélatrice sur la façon dont EthnosAI a aidé une entreprise à améliorer son expérience client. Découvrez comment notre logiciel a permis d'analyser efficacement les commentaires clients, conduisant à des améliorations significatives dans l'expérience globale de la clientèle."
 image: {
-    src: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?&fit=crop&w=430&h=240",
+    src: "/6.png",
     alt: "frontend master"
 }
 publishDate: "2022-11-07 15:39"

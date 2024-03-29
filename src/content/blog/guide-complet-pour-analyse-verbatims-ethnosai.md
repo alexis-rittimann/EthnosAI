@@ -3,7 +3,7 @@ draft: false
 title: "Guide complet pour l'analyse de verbatims en masse avec EthnosAI"
 snippet: "Découvrez comment utiliser EthnosAI pour analyser efficacement de grands ensembles de données de verbatims. Notre guide détaillé vous montre étape par étape comment importer, analyser et interpréter les résultats, vous aidant à prendre des décisions éclairées pour votre entreprise."
 image: {
-    src: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?&fit=crop&w=430&h=240",
+    src: "/7.png",
     alt: "full stack web development"
 }
 publishDate: "2024-01-08 11:39"

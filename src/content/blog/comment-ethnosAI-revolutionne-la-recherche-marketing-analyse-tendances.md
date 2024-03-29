@@ -3,7 +3,7 @@ draft: false
 title: "Comment EthnosAI révolutionne la recherche marketing et l'analyse des tendances"
 snippet: "Explorez comment EthnosAI transforme la recherche marketing en identifiant les tendances émergentes grâce à l'analyse de données massives. Découvrez comment notre technologie avancée va au-delà des méthodes traditionnelles pour vous fournir des insights profonds et exploitables."
 image: {
-    src: "https://images.unsplash.com/photo-1627163439134-7a8c47e08208?&fit=crop&w=430&h=240",
+    src: "/trend.webp",
     alt: "data structures & algorithms"
 }
 publishDate: "2022-11-09 16:39"
