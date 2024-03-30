@@ -8,9 +8,7 @@ Alternatively, you can clone the project directly from this repo to your local s
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/surjithctly/astroship.git myProjectName
-# or
-git clone https://github.com/surjithctly/astroship.git .
+git clone https:
 ```
 
 The `.` will clone it to the current directory so make sure you are inside your project folder first.
