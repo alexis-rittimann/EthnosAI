@@ -10,8 +10,5 @@ import alpinejs from "@astrojs/alpinejs";
 export default defineConfig({
   site: "https://astroship.web3templates.com",
   integrations: [tailwind(), mdx(), sitemap(), alpinejs()],
-  output: 'server',
-  adapter: netlify(),
-  edgeMiddleware: true
 
 });
